@@ -8,8 +8,8 @@ chrome.app.runtime.onLaunched.addListener(function() {
   chrome.app.window.create('index.html', {
     id: "desktopCaptureID",
     bounds: {
-      width: 700,
-      height: 600
+      width: 1200,
+      height: 1400
     }
   });
 });

@@ -25,9 +25,14 @@ Author: Dongseong Hwang (dongseong.hwang@intel.com)
  */
 var desktop_sharing = false;
 var local_stream = null;
+var gl_start = false;
 function toggle() {
     if (!desktop_sharing) {
         chrome.desktopCapture.chooseDesktopMedia(["screen", "window"], onAccessApproved);
+        if (!gl_start) {
+            glstart();
+            gl_start = true;
+        }
     } else {
         desktop_sharing = false;
 
